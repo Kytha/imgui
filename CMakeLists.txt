@@ -1,4 +1,4 @@
-SET ( GLAD_SOURCE
+SET ( IMGUI_SOURCE
       imgui_demo.cpp
       imgui_draw.cpp
       imgui_tables.cpp
@@ -6,7 +6,7 @@ SET ( GLAD_SOURCE
       imgui.cpp
   )
 
-SET ( GLAD_HEADERS
+SET ( IMGUI_HEADERS
     imgui.h
     imgui_internal.h
     imconfig.h
@@ -15,9 +15,9 @@ SET ( GLAD_HEADERS
     imstb_truetype.h
   )
 
-ADD_LIBRARY ( Glad STATIC
-  ${GLAD_SOURCE}
-  ${GLAD_HEADERS}
+ADD_LIBRARY ( imgui STATIC
+  ${IMGUI_SOURCE}
+  ${IMGUI_HEADERS}
   )
 
-TARGET_INCLUDE_DIRECTORIES(Glad PUBLIC /backends)
+TARGET_INCLUDE_DIRECTORIES(imgui PUBLIC /backends)
